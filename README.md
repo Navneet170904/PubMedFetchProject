@@ -2,8 +2,11 @@
 A Python command-line tool to fetch research papers from PubMed based on a user-specified query, identify papers with authors affiliated with pharmaceutical or biotech companies, and export the results as a CSV file.
 
 # 🚀 Features
+
 ✅ Fetches papers from PubMed using the full query syntax (via Entrez E-Utilities API).
+
 ✅ Identifies papers with at least one author affiliated with pharmaceutical or biotech companies, using heuristics on affiliations.
+
 ✅ Exports to CSV with:
 
 PubmedID
