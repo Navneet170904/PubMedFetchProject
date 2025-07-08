@@ -23,7 +23,8 @@ Corresponding Author Email
 
 # 🏗 Project Structure
 
-D:\onedrive data\Desktop\pubmedfetcher\pubmedfetcher\assests\CSV_Example.png
+![Project Structure](assests/project_structure.png)
+
 
 # 🛠 Installation
 ## 📌 Prerequisites
@@ -103,7 +104,8 @@ or saves to a CSV.
 
 # 📝 Example CSV Output
 
-D:\onedrive data\Desktop\pubmedfetcher\pubmedfetcher\assests\Tools.png
+![CSV Output](assests/CSV_Example.png)
+
 
 # 🧪 Testing
 bash
@@ -129,7 +131,7 @@ bash
 
 # 💡 Tools & Resources Used
 
-D:\onedrive data\Desktop\pubmedfetcher\pubmedfetcher\assests\Folder_structure.png
+![Tools](assests/Tools.png)
 
 LLMs (like ChatGPT) were also used to help generate scaffolding, heuristics, and README drafts.
 
