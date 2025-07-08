@@ -33,7 +33,8 @@ Poetry >= 1.3
 
 # 📦 Install dependencies
 bash
-    git clone https://github.com/yourusername/pubmedfetcher.git
+
+    git clone https://github.com/Navneet170904/PubMedFetchProject.git
 
     cd pubmedfetcher
     
@@ -53,24 +54,31 @@ This creates a virtual environment and installs:
 # 🎯 Run from CLI
 
 bash
+
     poetry run get-papers-list "<your query>" [options]
 
 Examples:
 
 ## Fetch results for 'breast cancer' and print to console
-poetry run get-papers-list "breast cancer"
+    
+    poetry run get-papers-list "breast cancer"
 
 ## Fetch and save to CSV file
-poetry run get-papers-list "breast cancer" -f breast_cancer_results.csv
+
+    poetry run get-papers-list "breast cancer" -f breast_cancer_results.csv
 
 ## Enable debug mode to see parsing details
-poetry run get-papers-list "breast cancer" -d
+
+    poetry run get-papers-list "breast cancer" -d
 
 # ⚙ CLI Options
 Option	Description
--h, --help	Show usage instructions
--d, --debug	Print debug output while fetching
--f, --file	Filename to save CSV (otherwise prints to console)
+
+    -h, --help	Show usage instructions
+
+    -d, --debug	Print debug output while fetching
+    
+    -f, --file	Filename to save CSV (otherwise prints to console)
 
 # 🧠 How it works
 Uses NCBI E-Utilities:
@@ -94,12 +102,12 @@ prints a neat table to console
 or saves to a CSV.
 
 # 📝 Example CSV Output
-PubmedID	Title	Publication Date	Non-academic Author(s)	Company Affiliation(s)	Corresponding Author Email
-40626336	Population Pharmacokinetics...	2025	Fernandez, Zhang	AstraZeneca	N/A
-40626272	A self-reinforced activatable...	2024	N/A	N/A	N/A
+
+![alt text](image-1.png)
 
 # 🧪 Testing
 bash
+
     poetry run pytest
 
 Tests heuristics on affiliations to make sure company detection works correctly.
@@ -110,6 +118,7 @@ This project is structured so you can:
 Build your wheel and sdist with Poetry:
 
 bash
+
     poetry build
 
 Publish to TestPyPI:
@@ -120,14 +129,7 @@ bash
 
 # 💡 Tools & Resources Used
 
-Tool	Link
-Python 3.11	python.org
-Poetry	python-poetry.org
-Typer	typer.tiangolo.com
-Requests	requests.readthedocs.io
-Pandas	pandas.pydata.org
-Pytest	pytest.org
-PubMed API (Entrez)	NCBI E-utilities
+![alt text](image-2.png)
 
 LLMs (like ChatGPT) were also used to help generate scaffolding, heuristics, and README drafts.
 
@@ -135,4 +137,4 @@ LLMs (like ChatGPT) were also used to help generate scaffolding, heuristics, and
 MIT License — see LICENSE.
 
 # 👋 Contact
-Made by Navneet Kumar Yadav."# PubMedFetchProject" 
+Made by Navneet Kumar Yadav.
