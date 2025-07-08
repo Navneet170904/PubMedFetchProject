@@ -34,7 +34,9 @@ Poetry >= 1.3
 # 📦 Install dependencies
 bash
     git clone https://github.com/yourusername/pubmedfetcher.git
+
     cd pubmedfetcher
+    
     poetry install
 
 This creates a virtual environment and installs:
