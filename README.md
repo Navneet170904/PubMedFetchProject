@@ -23,19 +23,8 @@ Corresponding Author Email
 
 # 🏗 Project Structure
 
-pubmedfetcher/
-│
-├── pubmedfetcher/
-│   ├── __init__.py
-│   ├── cli.py         # Typer command line interface
-│   └── fetcher.py     # Core fetching & parsing logic
-│
-├── tests/
-│   └── test_fetcher.py
-│
-├── pyproject.toml     # Poetry configuration
-├── README.md
-└── LICENSE
+![alt text](image.png)
+
 # 🛠 Installation
 ## 📌 Prerequisites
 Python >= 3.9
@@ -44,27 +33,26 @@ Poetry >= 1.3
 
 # 📦 Install dependencies
 bash
+    git clone https://github.com/yourusername/pubmedfetcher.git
+    cd pubmedfetcher
+    poetry install
 
-git clone https://github.com/yourusername/pubmedfetcher.git
-
-cd pubmedfetcher
-poetry install
 This creates a virtual environment and installs:
 
-requests for HTTP calls
+    requests for HTTP calls
 
-pandas for CSV
+    pandas for CSV
 
-typer for CLI
+    typer for CLI
 
-pytest for testing
+    pytest for testing
 
 # 🚀 Usage
 # 🎯 Run from CLI
 
 bash
+    poetry run get-papers-list "<your query>" [options]
 
-poetry run get-papers-list "<your query>" [options]
 Examples:
 
 ## Fetch results for 'breast cancer' and print to console
@@ -75,6 +63,7 @@ poetry run get-papers-list "breast cancer" -f breast_cancer_results.csv
 
 ## Enable debug mode to see parsing details
 poetry run get-papers-list "breast cancer" -d
+
 # ⚙ CLI Options
 Option	Description
 -h, --help	Show usage instructions
@@ -84,18 +73,17 @@ Option	Description
 # 🧠 How it works
 Uses NCBI E-Utilities:
 
-esearch.fcgi to get PubMed IDs for the query.
+    esearch.fcgi to get PubMed IDs for the query.
 
-efetch.fcgi to fetch detailed XML records.
+    efetch.fcgi to fetch detailed XML records.
 
 Extracts:
 
-PMID, title, year, authors, affiliations, emails.
+    PMID, title, year, authors, affiliations, emails.
 
 Applies simple heuristics to identify non-academic authors, based on whether affiliations lack words like:
 
-university, school, department, hospital, institute
-and thus are more likely pharmaceutical or biotech companies.
+    university, school, department, hospital, institute and thus are more likely pharmaceutical or biotech companies.
 
 Builds a pandas DataFrame, and either:
 
@@ -110,8 +98,8 @@ PubmedID	Title	Publication Date	Non-academic Author(s)	Company Affiliation(s)	Co
 
 # 🧪 Testing
 bash
+    poetry run pytest
 
-poetry run pytest
 Tests heuristics on affiliations to make sure company detection works correctly.
 
 # 🚀 Packaging & Publishing
@@ -119,13 +107,14 @@ This project is structured so you can:
 
 Build your wheel and sdist with Poetry:
 
+bash
+    poetry build
 
-poetry build
 Publish to TestPyPI:
 
 bash
 
-poetry publish -r testpypi
+    poetry publish -r testpypi
 
 # 💡 Tools & Resources Used
 

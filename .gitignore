@@ -1,0 +1,12 @@
+__pycache__/
+tests/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+.poetry/
+.cache/
+dist/
+build/
+*.egg-info/
